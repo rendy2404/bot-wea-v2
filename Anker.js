@@ -69,13 +69,13 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
             + 'FN:ANKER\n'
             + 'ORG:Owner DARK BOT;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=6281368646011:+62 813-6864-6011\n'
+            + 'TEL;type=CELL;type=VOICE;waid=+62 896-5359-3169n'
             + 'END:VCARD'
 
 prefix = "!"
-name = "~ D A R K | B O T"
-rdaftar = "TERIMA KASIH TELAH DAFTAR MENJADI TEMEN DARKBOT😁"
-rmenu = "HAI TEMEN DARKBOT👋 JANGAN LUPA DONASI YAA:)"
+name = "~ R E N D Y | B O T "
+rdaftar = "TERIMA KASIH TELAH DAFTAR MENJADI TEMEN RENDYBOT🥳"
+rmenu = "HAI TEMEN RENDYBOT👋 JANGAN LUPA DONASI YAA:)"
 limitt = 10
 ban = []
 
@@ -200,7 +200,7 @@ async function starts() {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6281368646011@s.whatsapp.net"] // owner number ubah aja
+			const ownerNumber = ["+62 89653593169s.whatsapp.net"] // owner number ubah aja
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
@@ -319,7 +319,7 @@ async function starts() {
 				break 
 		case 'daftar':
 					client.updatePresence(from, Presence.composing)
-					if (isUser) return reply('kamu sudah Menjadi Temen DARKBOT:D')
+					if (isUser) return reply('kamu sudah Menjadi Temen RENDYBOT:D')
 					if (isBanned) return reply(mess.only.benned)
 					user.push(sender)
 					fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
